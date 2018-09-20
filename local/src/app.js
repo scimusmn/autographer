@@ -7,8 +7,7 @@ var process = remote.process;
 //remote.getCurrentWindow().closeDevTools();
 
 var obtains = [
-  'drivelist',
-  'usb-detection',
+  'serialport',
 ];
 
 obtain(obtains, (drivelist, monitor)=> {

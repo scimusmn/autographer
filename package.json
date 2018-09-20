@@ -4,5 +4,6 @@
   "homepage": "http://re.trof.it",
   "dependencies": {
     "serialport": "7.0.2",
+    "ws": "^3.1.0"
   }
 }
