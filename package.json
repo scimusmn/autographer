@@ -1,0 +1,8 @@
+{
+  "author": "ajhg",
+  "license": "CC0-1.0",
+  "homepage": "http://re.trof.it",
+  "dependencies": {
+    "serialport": "7.0.2",
+  }
+}
