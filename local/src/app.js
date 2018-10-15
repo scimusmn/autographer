@@ -7,10 +7,10 @@ var process = remote.process;
 //remote.getCurrentWindow().closeDevTools();
 
 var obtains = [
-  'serialport',
+  'µ/google',
 ];
 
-obtain(obtains, (drivelist, monitor)=> {
+obtain(obtains, (google)=> {
 
   exports.app = {};
 
