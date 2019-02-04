@@ -15,16 +15,22 @@ sudo apt-get --assume-yes install libasound2
 
 echo  -e "\nClone the wrapper"
 
-git clone --recurse-submodules https://github.com/heidgera/Parcel.git
+mkdir ~/app
 
-cd Parcel
+cd ~/app
 
-echo  -e "\nInstalling dependencies for Parcel:"
+git clone --recurse-submodules https://github.com/scimusmn/stele-lite.git
+
+cd stele-lite
+
+echo  -e "\nInstalling dependencies for stele-lite:"
 
 npm i
 
 echo  -e "\nConfiguring"
 
-cd piFig
+cd configurator
+
+npm i
 
 sudo node install.js
