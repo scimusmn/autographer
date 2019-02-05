@@ -1,6 +1,6 @@
 exports.config = {
   piFig: {
-    appRepo: 'https://github.com/heidgera/SteleLite-AppTemplate',
+    appRepo: 'https://github.com/scimusmn/SteleLite-AppTemplate',
     autostart: true,
     gitWatch: true,
     preventSleep: true,
