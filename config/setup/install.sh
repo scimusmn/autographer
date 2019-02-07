@@ -84,6 +84,8 @@ then
   sudo systemctl restart dhcpcd
 
   waitForNetwork
+
+  echo -e "\n** Wifi connected."
 else
   echo -e "\n** Wifi won't be configured."
 fi
@@ -139,4 +141,10 @@ echo  -e "\n** Configuring machine..."
 
 cd configurator
 
-sudo node install.js
+sudo node install.js --config-only
+
+echo -e "\n**********************************************************"
+echo -e 'Going for system reboot in 10 seconds.'
+sleep 10
+
+sudo reboot
