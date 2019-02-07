@@ -130,7 +130,7 @@ echo  -e "\n** Installing node dependencies for stele-lite:"
 startWorking
 
 ## sometimes this call fails because it fails to dns registry.nodejs.org, retrying usually works
-while [ $(npm i 2> >( tee -a ~/stele_install.log | grep -o -i EAI_AGAIN) = 'EAI_AGAIN') ]; do
+while [[ $(npm i 2> >( tee -a ~/stele_install.log | grep -o -i EAI_AGAIN)) = 'EAI_AGAIN' ]]; do
   echo -e "\nDNS error while trying to install packages, retrying..."
   waitForNetwork
 done
