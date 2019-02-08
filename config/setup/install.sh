@@ -3,6 +3,41 @@
 # save the directory of the shell script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+declare -A flags
+declare -A booleans
+args=()
+
+while [ "$1" ];
+do
+    arg=$1
+    #if the next opt starts with a '-'
+    if [ "${1:0:1}" == "-" ]
+    then
+      # move to the next opt
+      shift
+      rev=$(echo "$arg" | rev) #reverse the string
+
+      #if the next opt is not empty, or begins with a '-', or this opt ends in a ':'
+      if [ -z "$1" ] || [ "${1:0:1}" == "-" ] || [ "${rev:0:1}" == ":" ]
+      then
+        # it is a boolean flag
+        bool=$(echo ${arg:1} | sed s/://g)
+        booleans[$bool]=true
+        #echo \"$bool\" is boolean
+      else
+        # it is a flag with a value
+        value=$1
+        flags[${arg:1}]=$value
+        shift
+        echo \"$arg\" is flag with value \"$value\"
+      fi
+    else
+      args+=("$arg")
+      shift
+      #echo \"$arg\" is an arg
+    fi
+done
+
 #clear the log file
 cat /dev/null > stele_install.log
 
@@ -163,7 +198,12 @@ cd configurator
 
 # Run the configurator in config-only mode, so that it exits once it completes.
 
-sudo node install.js --config-only
+if [[ -z "${flags["setup-dir"]}" ]]; then
+  sudo node install.js --config-only
+else
+  sudo node install.js --config-only --setup-dir "${flags["setup-dir"]}"
+fi
+
 
 # Restart the computer after the script finishes.
 echo -e "\n**********************************************************"
