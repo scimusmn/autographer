@@ -29,7 +29,6 @@ do
         value=$1
         flags[${arg:1}]=$value
         shift
-        echo \"$arg\" is flag with value \"$value\"
       fi
     else
       args+=("$arg")
