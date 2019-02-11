@@ -29,7 +29,12 @@ body {
   width:90vmin;
   height: 90vmin;
   background-color: #fff;
-  border-radius: 45vmin;
+  border-radius: 5vmin;
+	color: #333;
+}
+
+#outer div {
+	margin:20vmin;
 }
 
 #track {
