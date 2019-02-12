@@ -6,9 +6,11 @@ var process = remote.process;
 
 //remote.getCurrentWindow().closeDevTools();
 
-var obtains = [];
+var obtains = [
+  'µ/components/camera.js',
+];
 
-obtain(obtains, ()=> {
+obtain(obtains, (cam)=> {
 
   exports.app = {};
 
