@@ -1,6 +1,5 @@
 module.exports = {
   showDevTools: true,
-  preventStartup: false,
   // windows: [
   //   {
   //     label: 'main',

@@ -1,5 +1,5 @@
 exports.config = {
-  piFig: {
+  machine: {
     autostart: true,
     gitWatch: true,
     preventSleep: true,
