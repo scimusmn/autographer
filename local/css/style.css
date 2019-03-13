@@ -19,33 +19,40 @@ body {
   background-color: #2a2a2a;
 }
 
-cam-era {
-	width: 100vw;
-	height: auto;
+muse-graph {
+	background-color: #fed;
 }
 
-#outer {
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width:90vmin;
-  height: 90vmin;
-  background-color: #fff;
-  border-radius: 5vmin;
-	color: #333;
+#trackXY {
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+	width: 40vw;
+	height: 40vh;
+
+
 }
 
-#outer div {
-	margin:20vmin;
+#xTime{
+	position: absolute;
+	top: 50vh;
+	left: 5vw;
+	width: 40vw;
+	height: 40vh;
 }
 
-#track {
-  position: absolute;
-  width:10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #f00;
+#yTime{
+	position: absolute;
+	top: 5vh;
+	left: 50vw;
+	width: 40vw;
+	height: 40vh;
+}
+
+#ardTime{
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	width: 40vw;
+	height: 40vh;
 }

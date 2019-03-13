@@ -1,5 +1,8 @@
 module.exports = {
   showDevTools: true,
+  io: {
+    manufacturer: 'Arduino (www.arduino.cc)',
+  }
   // windows: [
   //   {
   //     label: 'main',
