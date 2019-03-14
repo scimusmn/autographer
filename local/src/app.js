@@ -91,7 +91,7 @@ obtain(obtains, ({Graph}, { Arduino })=> {
       //This actually makes the time progress backwards, min is simply
       // set to 20 seconds before the current time
       ytime.setRanges({x:{
-        min: Date.now()-20000,
+        min: Date.now()-2000,
         max: Date.now(),
       }});
       ytime.draw();
